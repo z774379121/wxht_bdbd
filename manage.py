@@ -140,6 +140,8 @@ def b(message):
             if re.match(key_word, i):
                 try:
                     k = int(filter(str.isdigit, i.encode('utf-8')))
+                    if k > 999:
+                        return '你别唬我哦\t这么多？'
                 except:
                     return '数据错误，请检查格式\n回复【5】查看详情'
                 kdict[m[key_word]] = k
