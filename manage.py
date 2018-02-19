@@ -151,7 +151,7 @@ def b(message):
 
 @robot.text
 def hello(message):
-    #签到
+    # 签到
     if message.content.encode('utf-8') in ['qd', '0', '签到']:
         return commands['qd'](message.source)
     for key_word in commands:
@@ -160,29 +160,10 @@ def hello(message):
     # 重量查询
     if message.content == 'xx':
         return simsimi.show_uese_info(message.source)
-    elif message.content == 'w':
-        return commands[u'明信片'](message.content)
     # 非关键字 tuling处理
     else:
         return res(message.content)
 
-
-@robot.location
-def cpimg(message):
-    return [
-        [
-            "title",
-            "description",
-            "http://oyvgzaycw.bkt.clouddn.com/IMG_0429.JPG.png",
-            "http://mp.weixin.qq.com/s/1EuVcXyzp5NtzOqlYP9HtA"
-        ],
-        [
-            "whtsky",
-            "I wrote WeRoBot",
-            "https://secure.gravatar.com/avatar/0024710771815ef9b74881ab21ba4173?s=420",
-            "https://github.com/z774379121/pyblog"
-        ]
-    ]
 
 # 让服务器监听在 0.0.0.0:80
 # robot.config['HOST'] = '0.0.0.0'
