@@ -19,9 +19,9 @@ import random
 #     return 'success'
 #
 #
-# def developing():
-#     """维护公告"""
-#     return wechat.response_text('该功能维护中')
+def developing():
+    """维护公告"""
+    return wechat.response_text('该功能维护中')
 
 # def html5_games():
 #     """HTML5游戏"""
@@ -374,6 +374,12 @@ def figuer_nums():
             "I wrote WeRoBot",
             random_pic(),
             "http://serialdater.net/macronutrient-calculator/"
+        ],
+        [
+            "维护中",
+            "Sorry, server not working now",
+            developing(),
+            “”
         ]
     ]
 
